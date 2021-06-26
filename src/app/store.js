@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { searchReduce } from '../components/searchSlice'
+// import { configureStore } from '@reduxjs/toolkit'
+// import { setCities } from '../components/searchSlice'
 
-export default configureStore({
-  reducer: {
-    search: searchReduce
-  }
-})
+// export default configureStore({
+//   reducer: {
+//     search: setCities
+//   }
+// })

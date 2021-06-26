@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 var webpack = require('webpack');
 
 
@@ -35,7 +34,6 @@ module.exports = {
             template: "./src/index.html"
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new Dotenv(),
     ],
     output: {
         filename: "[name].bundle.js",

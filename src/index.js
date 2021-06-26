@@ -5,7 +5,7 @@ import { hot } from 'react-hot-loader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Root from './components/root';
-import { Provider } from 'react-redux'
+//import { Provider } from 'react-redux'
 import store from './app/store'
 require("regenerator-runtime/runtime");
 hot(module)(Root);
@@ -24,8 +24,9 @@ window.addEventListener('resize', () => {
 })
 
 ReactDOM.render(
-  <Provider store={store}>
+  //<Provider store={store}>
     <Root />
-  </Provider>,
+  //</Provider>
+  ,
   document.querySelector('#root')
 );
