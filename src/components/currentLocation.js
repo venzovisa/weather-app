@@ -9,19 +9,19 @@ const CurrentLocation = () => {
     const [locationName, setLocationName] = useState(true);
 
     function getWeather() {
-        return fetch(process.env.IP_REQUEST)
+        return fetch('https://api.ipify.org?format=json')
             .then(result => result.json())
-            .then(result => fetch(`${process.env.LOCATIONS_API_URL}/cities/ipaddress?apikey=${process.env.WEATHER_API_KEY}&q=${result.ip}&language=en-us&details=true`))
+            .then(result => fetch(`http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${result.ip}&language=en-us&details=true`))
             .then(result => result.json())
-            .then(location => fetch(`${process.env.FORECASTS_API_URL}/daily/5day/${location.Key}?apikey=${process.env.WEATHER_API_KEY}&metric=true`))
+            .then(location => fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${location.Key}?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&metric=true`))
             .then(result => result.json())
             .then(json => json.DailyForecasts)
     }
 
     function getLocationName() {
-        return fetch(process.env.IP_REQUEST)
+        return fetch('https://api.ipify.org?format=json')
             .then(result => result.json())
-            .then(result => fetch(`${process.env.LOCATIONS_API_URL}/cities/ipaddress?apikey=${process.env.WEATHER_API_KEY}&q=${result.ip}&language=en-us&details=true`))
+            .then(result => fetch(`http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${result.ip}&language=en-us&details=true`))
             .then(result => result.json())
             .then(json => json.EnglishName)
     }

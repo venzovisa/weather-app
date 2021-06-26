@@ -10,7 +10,7 @@ export default function SearchBox({ handleSearchResult }) {
     let history = useHistory();
 
     async function getCities() {
-        const response = await fetch(`${process.env.LOCATIONS_API_URL}/cities/search?apikey=${process.env.WEATHER_API_KEY}&q=${searchInput}&offset=25`)
+        const response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${searchInput}&offset=25`)
         const json = await response.json();
         return json;
     }
