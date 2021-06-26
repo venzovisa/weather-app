@@ -11,9 +11,9 @@ const CurrentLocation = () => {
     function getWeather() {
         return fetch('https://api.ipify.org?format=json')
             .then(result => result.json())
-            .then(result => fetch(`http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${result.ip}&language=en-us&details=true`))
+            .then(result => fetch(`https://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${result.ip}&language=en-us&details=true`))
             .then(result => result.json())
-            .then(location => fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${location.Key}?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&metric=true`))
+            .then(location => fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${location.Key}?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&metric=true`))
             .then(result => result.json())
             .then(json => json.DailyForecasts)
     }
@@ -21,7 +21,7 @@ const CurrentLocation = () => {
     function getLocationName() {
         return fetch('https://api.ipify.org?format=json')
             .then(result => result.json())
-            .then(result => fetch(`http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${result.ip}&language=en-us&details=true`))
+            .then(result => fetch(`https://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A&q=${result.ip}&language=en-us&details=true`))
             .then(result => result.json())
             .then(json => json.EnglishName)
     }

@@ -5,7 +5,7 @@ import { sortText, sortNumber } from '../utils/sort';
 import _ from 'lodash';
 require("regenerator-runtime/runtime");
 const fetch = require('node-fetch');
-const topCitiesURL = `http://dataservice.accuweather.com/currentconditions/v1/topcities/100?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A`;
+const topCitiesURL = `https://dataservice.accuweather.com/currentconditions/v1/topcities/100?apikey=fzTBeQbPP2IOcaNzekZTUKvaC44qcq9A`;
 
 export default function TopLocations() {
     const [locations, setLocations] = useState([]);
