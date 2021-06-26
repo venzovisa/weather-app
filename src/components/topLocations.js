@@ -3,6 +3,7 @@ import LocationRow from './locationRow';
 import { Pagination, paginate } from '../utils/pagination';
 import { sortText, sortNumber } from '../utils/sort';
 import _ from 'lodash';
+require("regenerator-runtime/runtime");
 const fetch = require('node-fetch');
 const topCitiesURL = `${process.env.CURRENT_CONDITIONS_API_URL}/topcities/100?apikey=${process.env.WEATHER_API_KEY}`;
 
@@ -92,10 +93,10 @@ export default function TopLocations() {
                     </tbody>
                 </table>
             </div>
-            <Pagination 
-                itemsPerPage={10} 
-                totalItems={locations.length} 
-                currentPage={currentPage} 
+            <Pagination
+                itemsPerPage={10}
+                totalItems={locations.length}
+                currentPage={currentPage}
                 handlePageChange={handlePageChange}
                 handlePrevPage={handlePrevPage}
                 handleNextPage={handleNextPage}

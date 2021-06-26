@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Day from './day';
 import { getDayName } from '../utils/getDayName';
 const fetch = require('node-fetch');
+require("regenerator-runtime/runtime");
 
 const CurrentLocation = () => {
     const [weather, setWeather] = useState([]);

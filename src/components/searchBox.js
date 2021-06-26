@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 //import { useDispatch, useSelector } from 'react-redux'
 //import { fetchCities } from './searchSlice'
+require("regenerator-runtime/runtime");
 
 export default function SearchBox({ handleSearchResult }) {
     const [searchInput, setSearchInput] = useState('');
