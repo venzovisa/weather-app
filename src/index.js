@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Root from './components/root';
 //import { Provider } from 'react-redux'
-import store from './app/store'
+// import store from './app/store'
 require("regenerator-runtime/runtime");
 hot(module)(Root);
 
