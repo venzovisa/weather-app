@@ -1,0 +1,95 @@
+.section-title {
+    padding: 1rem 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.current-location {
+    padding-bottom: 2rem;
+    background: url(header1.jpg) no-repeat center top;
+
+    .days-container {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: auto;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+        justify-content: center;
+    }
+}
+
+.day-item {
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.day-title {
+    display: block;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 2rem;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 115, 253, 1) 100%);
+    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 50%);
+    
+    .date {
+        display: block;
+        padding-bottom: 0.5rem;
+        font-size: 0.75rem;
+        color: #fff;
+    }
+}
+
+.day-low {
+    display: block;
+    font-size: 1rem;
+}
+
+.day-high {
+    display: block;
+    font-size: 1rem;
+}
+
+.day-icon {
+    display: block;
+    margin: 0.5rem auto;
+    height: auto;
+    width: 100%;
+    max-width: 4rem;
+}
+
+.day-status {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.top-locations th:hover {
+    background: #f8f9fa;
+    cursor: pointer;
+}
+
+.pagination {
+    flex-wrap: wrap;
+    .page-item {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.footer {
+    padding: 2rem 0;
+    background-color: #f8f9fa !important;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .current-location .days-container {
+        grid-template-columns: 100%;
+    }
+}
