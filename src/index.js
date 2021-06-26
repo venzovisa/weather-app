@@ -5,15 +5,11 @@ import { hot } from 'react-hot-loader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Root from './components/root';
+import footerPusher from './utils/footerPusher'
 //import { Provider } from 'react-redux'
 //import store from './app/store'
 hot(module)(Root);
 
-function footerPusher() {
-  const header = document.querySelector('.navbar').clientHeight;
-  const footer = document.querySelector('.footer').clientHeight;
-  document.querySelector('.main').style.minHeight = String(window.innerHeight - (header + footer)).concat("px");
-}
 document.addEventListener('DOMContentLoaded', () => {
   footerPusher();
 })

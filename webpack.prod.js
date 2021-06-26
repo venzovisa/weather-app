@@ -22,7 +22,7 @@ module.exports = merge(common, {
     splitChunks: {
       cacheGroups: {
         defaultVendors: {
-          filename: '[name].bundle.js',
+          filename: 'app.bundle.js',
         },
         styles: {
           name: 'style',
@@ -35,7 +35,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'app.css',
     }),
   ],
   module: {
